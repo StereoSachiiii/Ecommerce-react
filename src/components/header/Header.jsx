@@ -5,30 +5,33 @@ import IconButton from '@mui/material/IconButton';
 
 const Header = () => {
   return (
-    <header className='drop-shadow-2xl fixed w-full p-5 bg-green-200 flex items-center justify-between'>
-      {/* header left */}
-      <div className='flex items-center'>
-        <IconButton sx={{ color: 'red' }}>
-          <MenuIcon sx={{ color: 'red' }} />
+    <header className="bg-slate-800 text-white shadow-md z-50 drop-shadow-2xl fixed top-0 w-full p-4 flex items-center justify-between">
+      {/* Left side */}
+      <div className="flex items-center">
+        <IconButton>
+          <MenuIcon className="text-red-400" />
         </IconButton>
 
-        <h1 className='text-sm font-bold ml-2'>
-          Stereo <span className='text-red-400'>hearT</span>
+        <h1 className="text-sm md:text-lg font-bold ml-2">
+          Stereo <span className="text-red-400">hearT</span>
         </h1>
 
-        <div className='flex items-center rounded-full overflow-hidden ml-4'>
-          <input
-            type='text'
-            className='ml-1 outline-none p-2 font-semibold text-sm w-40 bg-gray-200 rounded-full'
-            placeholder='search'
-          />
-          <SearchIcon className='text-gray-400 ml-2' />
-        </div>
+        {/* Search bar - hidden on small screens */}
+     <div className="flex items-center bg-blue-950 ml-4 px-2 rounded-full">
+  {/* Input hidden on small screens */}
+  <input
+    type="text"
+    className="outline-none p-1 text-sm w-32 md:w-48 bg-black text-white hidden sm:block"
+    placeholder="search"
+  />
+  <SearchIcon className="text-gray-500 ml-1" />
+</div>
+
       </div>
 
-      {/* header right */}
+      {/* Right side */}
       <IconButton>
-        <ShoppingCartIcon />
+        <ShoppingCartIcon className="text-white" />
       </IconButton>
     </header>
   );
