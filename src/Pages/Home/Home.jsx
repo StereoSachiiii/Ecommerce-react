@@ -1,5 +1,5 @@
 import React from 'react'
-import Ads from './ads'
+import Ads from './Ads'
 import Product from './Product'
 
 

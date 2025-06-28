@@ -13,6 +13,9 @@ const adsElement = [
         imageUrl:"https://wallpaperaccess.com/full/2962271.jpg"
     },{
         imageUrl:"https://wallpaperaccess.com/full/8652638.jpg"
+    },
+    {
+        imageUrl:"https://wallpaperaccess.com/full/8652638.jpg"
     }
 ]
 const AdUnit = ({imageUrl,id})=>(

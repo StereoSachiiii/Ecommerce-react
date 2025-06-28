@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Grid, Pagination } from 'swiper/modules';
+import { Grid, Mousewheel, Pagination } from 'swiper/modules';
 import { IconButton } from '@mui/material';
+import './style2.css';
+
 
 const productArray = [
   {
@@ -12,6 +14,26 @@ const productArray = [
     imageUrl: "https://wallpaperaccess.com/full/187273.jpg",
     price: 1000,
     productTitle: "Sample Product 2"
+  },
+  {
+    imageUrl: "https://wallpaperaccess.com/full/187273.jpg",
+    price: 1000,
+    productTitle: "Sample Product 3"
+  },
+  {
+    imageUrl: "https://wallpaperaccess.com/full/187273.jpg",
+    price: 1000,
+    productTitle: "Sample Product 3"
+  },
+  {
+    imageUrl: "https://wallpaperaccess.com/full/187273.jpg",
+    price: 1000,
+    productTitle: "Sample Product 3"
+  },
+  {
+    imageUrl: "https://wallpaperaccess.com/full/187273.jpg",
+    price: 1000,
+    productTitle: "Sample Product 3"
   },
   {
     imageUrl: "https://wallpaperaccess.com/full/187273.jpg",
@@ -45,28 +67,32 @@ const ProductUnit = ({ imageUrl, price, productTitle }) => {
 
 const Product = ({ title, rowsCount, slidesPerView }) => {
   return (
-    <section>
-      <h1 className='text-lg font-extrabold text-stone-800 mb-2.5'>{title}</h1>
+<div className="pt-[72px] pb-[100px]">
+  <h1 className='font-semibold'>Trending</h1> {/* push down from header, up from footer */}
+  <section className="min-h-[calc(100vh-120px)]">
+    <Swiper
+      className="h-full w-full"
+      slidesPerView={Number(slidesPerView)}
+      grid={{ rows: Number(rowsCount) }}
+      spaceBetween={30}
+      pagination={{ clickable: true, dynamicBullets: true }}
+      mousewheel={true}
+      modules={[Grid, Pagination, Mousewheel]}
+    >
+      {productArray.map(({ imageUrl, price, productTitle }, index) => (
+        <SwiperSlide key={index}>
+          <ProductUnit
+            imageUrl={imageUrl}
+            price={price}
+            productTitle={productTitle}
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </section>
+</div>
 
-      <Swiper
-        slidesPerView={Number(slidesPerView)}
-        grid={{ rows: Number(rowsCount) }}
-        spaceBetween={30}
-        pagination={{ clickable: true }}
-        modules={[Grid, Pagination]}
-      >
-        {productArray.map(({ imageUrl, price, productTitle }, index) => (
-          <SwiperSlide key={index}>
-            <ProductUnit
-              imageUrl={imageUrl}
-              price={price}
-              productTitle={productTitle}
-              id={index}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+
   );
 };
 
