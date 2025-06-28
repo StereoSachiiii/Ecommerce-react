@@ -5,7 +5,7 @@ import IconButton from '@mui/material/IconButton';
 
 const Header = () => {
   return (
-    <header className="bg-black text-white shadow-md z-50 drop-shadow-2xl fixed top-0 w-full p-4 flex items-center justify-between">
+    <header className="bg-black text-white shadow-md z-50 drop-shadow-2xl  fixed top-0 w-full p-4 flex items-center justify-between">
       {/* Left side */}
       <div className="flex items-center">
         <IconButton>

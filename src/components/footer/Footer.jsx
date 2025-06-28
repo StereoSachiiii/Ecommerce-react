@@ -6,7 +6,7 @@ import { CategoryOutlined } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white p-4 shadow-inner fixed bottom-0 w-full z-50 flex items-center justify-evenly">
+    <footer className="bg-black text-white p-4 shadow-inner fixed bottom-0 h-[100px] w-full z-50 flex items-center justify-evenly mt-[20-px] ">
       <IconButton >
        <FooterIcon Icon={HomeOutlinedIcon} iconText={"home"}/> 
       </IconButton>
