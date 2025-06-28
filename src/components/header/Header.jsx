@@ -5,19 +5,19 @@ import IconButton from '@mui/material/IconButton';
 
 const Header = () => {
   return (
-    <header className="bg-slate-800 text-white shadow-md z-50 drop-shadow-2xl fixed top-0 w-full p-4 flex items-center justify-between">
+    <header className="bg-black text-white shadow-md z-50 drop-shadow-2xl fixed top-0 w-full p-4 flex items-center justify-between">
       {/* Left side */}
       <div className="flex items-center">
         <IconButton>
-          <MenuIcon className="text-red-400" />
+          <MenuIcon className="text-white" />
         </IconButton>
 
         <h1 className="text-sm md:text-lg font-bold ml-2">
-          Stereo <span className="text-red-400">hearT</span>
+          Stereo <span className="text-white">hearT</span>
         </h1>
 
         {/* Search bar - hidden on small screens */}
-     <div className="flex items-center bg-blue-950 ml-4 px-2 rounded-full">
+     <div className="flex items-center bg-black ml-4 px-2 rounded-full ">
   {/* Input hidden on small screens */}
   <input
     type="text"

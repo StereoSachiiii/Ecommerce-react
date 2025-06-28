@@ -6,15 +6,15 @@ import { CategoryOutlined } from '@mui/icons-material';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-800 text-white p-4 shadow-inner fixed bottom-0 w-full z-50 flex items-center justify-center">
+    <footer className="bg-black text-white p-4 shadow-inner fixed bottom-0 w-full z-50 flex items-center justify-evenly">
       <IconButton >
-       <FooterIcon Icon={HomeOutlinedIcon}/> 
+       <FooterIcon Icon={HomeOutlinedIcon} iconText={"home"}/> 
       </IconButton>
       <IconButton>
-        <FooterIcon Icon={CategoryOutlined} />  
+        <FooterIcon Icon={CategoryOutlined} iconText={"Category"} />  
       </IconButton>
       <IconButton>
-        <FooterIcon Icon={AccountCircleIcon} />  
+        <FooterIcon Icon={AccountCircleIcon}  iconText={"Profile"} />  
       </IconButton>
     </footer>
   );
@@ -22,7 +22,7 @@ const Footer = () => {
 
 export default Footer;
 
-const FooterIcon=({Icon})=>(
+const FooterIcon=({Icon,iconText})=>(
      <IconButton 
      sx={
         {
@@ -31,9 +31,9 @@ const FooterIcon=({Icon})=>(
             color:'red',
         }
       }>
-        <div>
+        <div className='text-amber-50 hover:text-shadow-amber-200 transition-all duration-300'>
             <Icon />
-        <p className='text-xs'>Home</p> 
+        <p className='text-xs'>{iconText}</p> 
         </div>
     
 
