@@ -28,7 +28,7 @@ const FooterIcon=({Icon,iconText})=>(
         {
             padding:'10px',
             borderRadius:'5px',
-            color:'red',
+            color:'white',
         }
       }>
         <div className='text-amber-50 hover:text-shadow-amber-200 transition-all duration-300'>

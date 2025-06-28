@@ -9,6 +9,8 @@ const Home = () => {
 
   <Ads></Ads>
   <Product title="Trending products" rowsCount={1} slidesPerView={3} />
+  <Product title="Categories" rowsCount={1} slidesPerView={3} />
+  <Product title="Computer accecories" rowsCount={1} slidesPerView={3} />
       </div>
   
 

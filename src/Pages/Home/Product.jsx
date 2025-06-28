@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Grid, Mousewheel, Pagination } from 'swiper/modules';
-import { IconButton } from '@mui/material';
+import { IconButton, Rating } from '@mui/material';
 import './style2.css';
+
 
 
 const productArray = [
@@ -55,10 +56,16 @@ const ProductUnit = ({ imageUrl, price, productTitle }) => {
 
     
 
-    <div className="w-full">
+    <div className="w-full xx ">
 
       <img src={imageUrl} alt={productTitle} className="w-full object-contain" />
       <h3  className='text-sm font-bold text-stone-900'>{productTitle}</h3>
+      <Rating
+  name={imageUrl}
+  value={3.3}
+  precision={0.5}
+ readOnly
+  />
       <h3 className='text-sm font-semibold text-stone-900'>Rs.{price}/-</h3>
     </div>
     </IconButton>
@@ -67,9 +74,12 @@ const ProductUnit = ({ imageUrl, price, productTitle }) => {
 
 const Product = ({ title, rowsCount, slidesPerView }) => {
   return (
-<div className="pt-[72px] pb-[100px]">
-  <h1 className='font-semibold'>Trending</h1> {/* push down from header, up from footer */}
-  <section className="min-h-[calc(100vh-120px)]">
+<div
+ className="pt-[5px] pb-[100px] "
+
+>
+  <h1 className='font-semibold'>{title}</h1> {/* push down from header, up from footer */}
+  <section className="xx">
     <Swiper
       className="h-full w-full"
       slidesPerView={Number(slidesPerView)}
