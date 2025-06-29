@@ -31,6 +31,7 @@ const [isSearch,setIsSearch] = useState(false)
          'none':
          'inline-block':
          'inline block',
+         transition:'all 400ms ease-in-out'
       }}
          >
           Stereo <span className="text-white">hearT</span>
@@ -44,7 +45,7 @@ const [isSearch,setIsSearch] = useState(false)
   {/* Input hidden on small screens */}
   <input
     type="text"
-    className="outline-none p-1 text-sm w-32 md:w-48 bg-black text-white hidden sm:inline-block"
+    className=" outline-none p-1 text-sm w-32 md:w-48 bg-black text-white hidden sm:inline-block"
     placeholder="search"
     style={
       {
@@ -71,7 +72,9 @@ const [isSearch,setIsSearch] = useState(false)
 
       {/* Right side */}
       <IconButton>
+    <div className='rounded-full relative p-1'></div>
         <ShoppingCartIcon className="text-white" />
+        <div className="absolute top-0 right-0 text-[13px] w-3 h-3  font-bold text-black bg-white rounded-full flex items-center  justify-center">2</div>
       </IconButton>
     </header>
   );
